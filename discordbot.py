@@ -2,8 +2,6 @@ from discord.ext import commands
 from os import getenv
 import traceback
 
-intents = discord.Intents.default()
-intents.members = True
 bot = commands.Bot(command_prefix='/')
 
 
@@ -17,7 +15,7 @@ async def on_command_error(ctx, error):
 async def on_ready():
     print('{0.user}がログインしました'.format(bot))
     count = len(bot.guilds)
-    await bot.change_presence(activity=discord.Game(name="Cu!help|" + str(count), type=1)
+    await bot.change_presence(activity=discord.Game(name="Cu!help|" + str(count), type=1))
 
 @bot.command()
 async def ping(ctx):
