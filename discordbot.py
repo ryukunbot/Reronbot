@@ -13,7 +13,9 @@ async def on_command_error(ctx, error):
 
 @bot.event
 async def on_ready():
-    await ctx.change_presence(activity=discord.game('My bot status'))
+    print("起動！")
+
+    await client.change_presence(activity=discord.Game(name=f"TEST{len(client.guilds)}サーバー"))
 
 @bot.command()
 async def ping(ctx):
