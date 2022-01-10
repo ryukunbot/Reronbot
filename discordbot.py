@@ -11,6 +11,9 @@ async def on_command_error(ctx, error):
     error_msg = ''.join(traceback.TracebackException.from_exception(orig_error).format())
     await ctx.send(error_msg)
 
+@.event
+async def on_ready():
+await bot.change_presence(activity=discord.Game(f"#ここを好きなように変える")
 
 @bot.command()
 async def ping(ctx):
