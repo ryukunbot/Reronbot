@@ -14,11 +14,11 @@ async def on_command_error(ctx, error):
 @bot.event
 async def on_ready():
     print("Botは正常に起動しました！")
-    print(client.user.name)  # Botの名前
-    print(client.user.id)  # ID
+    print(bot.user.name)  # Botの名前
+    print(bot.user.id)  # ID
     print(discord.__version__)  # discord.pyのバージョン
     print('------')
-    await client.change_presence(activity=discord.Game(name=f"TEST{len(client.guilds)}サーバー"))
+    await bot.change_presence(activity=discord.Game(name=f"TEST{len(bot.guilds)}"))
 
 @bot.command()
 async def ping(ctx):
