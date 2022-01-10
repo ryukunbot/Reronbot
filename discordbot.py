@@ -14,7 +14,9 @@ async def on_command_error(ctx, error):
 
 @bot.event
 async def on_ready():
-    print("起動！")
+    print('{0.user}がログインしました'.format(bot))
+    count = len(bot.guilds)
+    await bot.change_presence(activity=discord.Game(name="Cu!help|" + str(count), type=1))
 
     await client.change_presence(activity=discord.Game(name=f"TEST{len(client.guilds)}サーバー"))
 
