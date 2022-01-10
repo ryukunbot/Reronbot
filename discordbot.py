@@ -1,6 +1,7 @@
 from discord.ext import commands
 from os import getenv
 import traceback
+import discord
 
 bot = commands.Bot(command_prefix='/')
 
