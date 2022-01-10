@@ -1,6 +1,7 @@
 from discord.ext import commands
 from os import getenv
 import traceback
+import disordbot
 
 bot = commands.Bot(command_prefix='/')
 
@@ -11,9 +12,10 @@ async def on_command_error(ctx, error):
     error_msg = ''.join(traceback.TracebackException.from_exception(orig_error).format())
     await ctx.send(error_msg)
 
-@bot.event
-async def on_ready():
-await bot.change_presence(activity=discord.Game(f"#ここを好きなように変える")
+@client.event
+async def on_ready(): # botが起動したときに動作する処理
+    print('ログインしました')
+    await client.change_presence(activity=discord.Game(name="with discord.py", type=1))
 
 @bot.command()
 async def ping(ctx):
