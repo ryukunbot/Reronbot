@@ -13,7 +13,7 @@ async def on_command_error(ctx, error):
 
 @bot.event
 async def on_ready():
-    await bot.change_presence(activity=discord.game('My bot status'))
+    await ctx.change_presence(activity=discord.game('My bot status'))
 
 @bot.command()
 async def ping(ctx):
