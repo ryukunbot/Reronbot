@@ -15,7 +15,7 @@ async def on_command_error(ctx, error):
 async def on_ready():
     print('{0.user}がログインしました'.format(bot))
     count = len(bot.guilds)
-    await bot.change_presence(activity=discord.Game(name="Cu!help|" + str(count), type=1))
+    await bot.change_presence(activity=discord.Game(name="参加中のサーバー数" + str(count), type=1))
 
     await client.change_presence(activity=discord.Game(name=f"TEST{len(client.guilds)}サーバー"))
 
