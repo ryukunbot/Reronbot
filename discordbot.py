@@ -12,11 +12,6 @@ async def on_command_error(ctx, error):
     await ctx.send(error_msg)
 
 
-@bot.event
-activity = discord.Activity(name='my activity', type=discord.ActivityType.watching)
-    await client.change_presence(activity=activity)
-
-
 @bot.command()
 async def ping(ctx):
     await ctx.send('pong')
