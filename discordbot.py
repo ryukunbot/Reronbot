@@ -14,7 +14,7 @@ async def on_command_error(ctx, error):
 
 @bot.event
 async def on_ready():
-    await bot.change_presence(activity=discord.Game(f"ここを好きなように変える")
+    await bot.change_presence(activity=discord.Game('My bot status'))
 
 
 @bot.command()
