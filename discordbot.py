@@ -13,8 +13,8 @@ async def on_command_error(ctx, error):
 
 
 @bot.event
-async def on_ready():
-    await bot.change_presence(activity=discord.Game('My bot status'))
+activity = discord.Activity(name='my activity', type=discord.ActivityType.watching)
+    await client.change_presence(activity=activity)
 
 
 @bot.command()
