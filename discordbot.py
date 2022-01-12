@@ -12,6 +12,11 @@ async def on_command_error(ctx, error):
     await ctx.send(error_msg)
 
 
+@bot.event
+async def on_ready():
+await bot.change_presence(activity=discord.Game(f"#ここを好きなように変える")
+
+
 @bot.command()
 async def ping(ctx):
     await ctx.send('pong')
