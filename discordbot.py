@@ -2,8 +2,7 @@ from discord.ext import commands
 from os import getenv
 import traceback
 
-bot = commands.Bot(command_prefix='r?')
-token = os.environ['DISCORD_BOT_TOKEN']
+bot = commands.Bot(command_prefix='/')
 
 
 @bot.event
@@ -15,11 +14,8 @@ async def on_command_error(ctx, error):
 
 @bot.command()
 async def ping(ctx):
-    await ctx.send('おはよ')
+    await ctx.send('pong')
 
-@bot.command()
-async def おやすみ(ctx):
-    await ctx.send('おやすみ')
 
-    
+token = getenv('DISCORD_BOT_TOKEN')
 bot.run(token)
