@@ -19,7 +19,7 @@ async def ping(ctx):
 
 @bot.event
 activity = discord.Activity(name='my activity', type=discord.ActivityType.watching)
-    await client.change_presence(activity=activity)
+    await ctx.change_presence(activity=activity)
 
 
 token = getenv('DISCORD_BOT_TOKEN')
