@@ -18,8 +18,8 @@ async def ping(ctx):
 
 
 @bot.event
-async def on_ready(ctx):
-    await ctx.change_presence(activity=discord.Game(f"#ここを好きなように変える")
+activity = discord.Activity(name='my activity', type=discord.ActivityType.watching)
+    await client.change_presence(activity=activity)
 
 
 token = getenv('DISCORD_BOT_TOKEN')
