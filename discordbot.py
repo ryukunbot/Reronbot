@@ -18,7 +18,7 @@ async def ping(ctx):
 
 
 @bot.event
-async def on_ready():
+async def on_ready(ctx):
     await ctx.change_presence(activity=discord.Game(f"#ここを好きなように変える")
 
 
