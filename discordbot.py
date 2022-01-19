@@ -19,7 +19,7 @@ async def ping(ctx):
 
 @bot.event
 async def on_ready():
-await bot.change_presence(activity=discord.Game(f"#ここを好きなように変える")
+    await ctx.change_presence(activity=discord.Game(f"#ここを好きなように変える")
 
 
 token = getenv('DISCORD_BOT_TOKEN')
