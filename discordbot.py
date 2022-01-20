@@ -13,13 +13,8 @@ async def on_command_error(ctx, error):
 
 
 @bot.command()
-async def ping(ctx):
-    await ctx.send('pong')
-
-
-@bot.event
-activity = discord.Activity(name='my activity', type=discord.ActivityType.watching)
-    await ctx.change_presence(activity=activity)
+async def test(ctx):
+    await ctx.send('動いてるよ')
 
 
 token = getenv('DISCORD_BOT_TOKEN')
