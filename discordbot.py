@@ -12,6 +12,12 @@ async def on_command_error(ctx, error):
     await ctx.send(error_msg)
 
 
+@bot.event
+async def on_ready():
+    print("正常に起動しました")
+    await bot.change_presence(activity=discord.Game(name="Game"))
+
+
 @bot.command()
 async def test(ctx):
     await ctx.send('動いてるよ')
